@@ -1,0 +1,72 @@
+/* Custom Variables */
+:root {
+  --primary-color: #3498db;
+  --bg-light: #f8f9fa;
+  --text-dark: #212529;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --bg-light: #1a1a1a;
+  --text-dark: #f8f9fa;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  padding: 100px 0;
+}
+
+/* Project Cards */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Skill Icons */
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+/* Animations */
+[data-aos] {
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(20px);
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .skill-icon {
+    font-size: 1.5rem;
+  }
+}
